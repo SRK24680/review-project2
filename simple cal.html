@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Calculation</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    .container {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    input[type="number"] {
+      width: 100%;
+      padding: 5px;
+      margin-bottom: 10px;
+    }
+
+    button {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    .result {
+      margin-top: 20px;
+      font-weight: bold;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h1>Simple Calculation</h1>
+  <div class="container">
+    <label for="num1">Number 1:</label>
+    <input type="number" id="num1" placeholder="Enter a number" />
+
+    <label for="num2">Number 2:</label>
+    <input type="number" id="num2" placeholder="Enter a number" />
+
+    <button onclick="calculate()">Calculate</button>
+
+    <div class="result" id="result"></div>
+  </div>
+
+  <script>
+    function calculate() {
+      var num1 = parseFloat(document.getElementById('num1').value);
+      var num2 = parseFloat(document.getElementById('num2').value);
+
+      var result = num1 + num2;
+
+      document.getElementById('result').textContent = "Result: " + result;
+    }
+  </script>
+    <h2>more calculator</h2>
+    <h3><a href="speed.html">speed</a></h3>
+    <h3><a href="temp-con.html">temperature conversion</a></h3>
+    <h3><a href="currency.html">currency</a></h3>
+    <h3><a href="simple cal.html">simple calculation</a></h3>
+</body>
+</html>

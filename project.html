@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Scientific Calculator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .calculator {
+      width: 300px;
+      margin: 20px auto;
+      border: 1px solid #ccc;
+      padding: 10px;
+      border-radius: 5px;
+      background-color: #f7f7f7;
+    }
+    
+    .calculator input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      font-size: 16px;
+    }
+    
+    .calculator button {
+      width: 70px;
+      height: 40px;
+      margin: 5px;
+      font-size: 16px;
+    }
+    
+    .calculator button.operator {
+      background-color: #ff9800;
+      color: #fff;
+    }
+    
+    .calculator button.clear {
+      background-color: #f44336;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <div class="calculator">
+    <input type="text" id="result" readonly>
+    <button onclick="clearInput()" class="clear">C</button>
+    <button onclick="appendInput('7')">7</button>
+    <button onclick="appendInput('8')">8</button>
+    <button onclick="appendInput('9')">9</button>
+    <button onclick="appendInput('/')">/</button>
+    <button onclick="appendInput('4')">4</button>
+    <button onclick="appendInput('5')">5</button>
+    <button onclick="appendInput('6')">6</button>
+    <button onclick="appendInput('*')">*</button>
+    <button onclick="appendInput('1')">1</button>
+    <button onclick="appendInput('2')">2</button>
+    <button onclick="appendInput('3')">3</button>
+    <button onclick="appendInput('-')">-</button>
+    <button onclick="appendInput('0')">0</button>
+    <button onclick="appendInput('.')">.</button>
+    <button onclick="calculate()">=</button>
+    <button onclick="appendInput('+')" class="operator">+</button>
+  </div>
+  <h2>More calculation</h2>
+  <h3><a href="simple cal.html">simple calculation</a></h3>
+  <h3><a href="currency.html">currency</a></h3>
+  <h3><a href="temp-con.html">Temperature coversion</a></h3>
+  <h3><a href="speed cal.html">speed</a></h3>
+
+  <script>
+    function appendInput(value) {
+      document.getElementById('result').value += value;
+    }
+    
+    function clearInput() {
+      document.getElementById('result').value = '';
+    }
+    
+    function calculate() {
+      let result = document.getElementById('result').value;
+      let answer = eval(result);
+      document.getElementById('result').value = answer;
+    }
+  </script>
+</body>
+</html>
